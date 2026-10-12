@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Developer portfolio: web applications, backend systems and software projects."><meta name="theme-color" content="#050505"><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23050505%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22800%22%20fill%3D%22%237C3AED%22%20text-anchor%3D%22middle%22%3EPS%3C/text%3E%3C/svg%3E"><title>P. Simon | Full-Stack Developer</title>
+<style>
+:root{--bg:#F6F6F8;--bg2:#fff;--card:#fff;--border:rgba(0,0,0,.1);--text:#0A0A0F;--muted:#52525B;--ac:#7C3AED;--ac2:#06B6D4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#050505;--bg2:#0B0B0B;--card:#111;--border:rgba(255,255,255,.1);--text:#fff;--muted:#A1A1AA}}
+:root[data-theme="dark"]{--bg:#050505;--bg2:#0B0B0B;--card:#111;--border:rgba(255,255,255,.1);--text:#fff;--muted:#A1A1AA}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+h1,h2,h3{letter-spacing:-.03em;line-height:1.1;margin:0}
+a{color:inherit}:focus-visible{outline:2px solid var(--ac2);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}section{padding:72px 0}
+h2{font-size:clamp(28px,5vw,40px);margin-bottom:8px}.sub{color:var(--muted);margin:0 0 32px;max-width:60ch}
+.grad{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.logo{font-weight:800;text-decoration:none;margin-right:auto}
+.links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.links a{padding:6px 10px;border-radius:8px;text-decoration:none;color:var(--muted);font-size:14px;white-space:nowrap}
+.links a.on{color:var(--text);background:var(--card)}
+#bar{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2))}
+.btn{display:inline-flex;min-height:44px;align-items:center;justify-content:center;gap:8px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);padding:10px 20px;font:inherit;font-weight:600;text-decoration:none;cursor:pointer;transition:transform .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--ac2)}.btn.p{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn[aria-disabled=true]{opacity:.45;pointer-events:none}.btn.ic{padding:0;width:44px}
+.hero{padding:140px 0 72px;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 15%,#000,transparent 70%);mask-image:radial-gradient(ellipse at 50% 15%,#000,transparent 70%);pointer-events:none}
+.hero .wrap{position:relative}
+.avail{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:99px;padding:4px 14px;font-size:14px;color:var(--muted);margin-bottom:20px}
+.avail i{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pd 2s infinite}
+@keyframes pd{0%{box-shadow:0 0 0 0 #22c55e88}70%{box-shadow:0 0 0 8px transparent}}
+@keyframes bl{50%{opacity:0}}
+h1{font-size:clamp(40px,9vw,84px);font-weight:800}
+.role{font-size:clamp(20px,3.5vw,30px);margin:16px 0;min-height:1.4em;font-weight:600}.role b{animation:bl 1s steps(1) infinite;color:var(--ac2)}
+.hero p.bio{color:var(--muted);max-width:56ch;font-size:18px}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:56px}
+.stats div{border-left:2px solid var(--ac);padding-left:14px}.stats strong{display:block;font-size:34px;line-height:1.1}.stats span{color:var(--muted);font-size:14px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:22px;transition:border-color .2s}.card:hover{border-color:color-mix(in srgb,var(--ac) 60%,transparent)}
+.card h3{font-size:19px;margin-bottom:6px}.card p{color:var(--muted);margin:0 0 12px;font-size:15px}
+.badge{display:inline-block;margin:3px 3px 0 0;border:1px solid var(--border);border-radius:99px;padding:2px 10px;font-size:12px;color:var(--muted)}
+.ph{font-style:italic;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{border:1px solid var(--border);background:var(--card);color:var(--muted);border-radius:99px;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer;min-height:40px}
+.filters button[aria-pressed=true]{background:var(--ac);border-color:var(--ac);color:#fff}
+.pc{cursor:pointer;display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;width:100%}
+.thumb{height:130px;border-radius:12px;margin-bottom:14px;display:grid;place-items:center;font-size:32px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--ac),var(--ac2))}
+.meta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px}
+dialog{border:1px solid var(--border);border-radius:20px;background:var(--bg2);color:var(--text);max-width:640px;width:calc(100% - 32px);max-height:88vh;padding:28px}
+dialog::backdrop{background:rgba(0,0,0,.6)}dialog h4{margin:18px 0 4px;font-size:15px}dialog p{margin:0;color:var(--muted)}dialog ul{margin:0;padding-left:20px;color:var(--muted)}
+.sk{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.bar{margin-top:10px}.bar div:first-child{display:flex;justify-content:space-between;font-size:14px}.bar span{color:var(--muted)}
+.track{height:6px;border-radius:9px;background:var(--border);margin-top:4px;overflow:hidden}.track i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:9px;transition:width 1s cubic-bezier(.22,1,.36,1)}
+.wall{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.wall span{border:1px solid var(--border);background:var(--card);border-radius:10px;padding:6px 14px;font-size:14px}
+.tl{border-left:2px solid var(--border);margin-left:6px}.tl .card{margin:0 0 16px 22px;position:relative}.tl .card::before{content:"";position:absolute;left:-30px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--ac);border:2px solid var(--bg)}
+.date{font-size:13px;color:var(--ac2);font-weight:600}
+form{display:grid;gap:12px;max-width:560px}label{font-size:14px;color:var(--muted);display:grid;gap:4px}
+.f{width:100%;border-radius:12px;border:1px solid var(--border);background:var(--bg2);color:var(--text);padding:12px 14px;font:inherit}
+.hp{position:absolute;left:-9999px}.err{color:#ef4444;font-size:13px;min-height:1em}
+.sw{display:flex;border:1px solid var(--border);border-radius:12px;padding:3px;background:var(--card)}.sw button{border:0;background:none;color:var(--muted);font:inherit;font-size:13px;font-weight:600;padding:0 12px;min-height:36px;border-radius:9px;cursor:pointer;white-space:nowrap}.sw button[aria-pressed=true]{background:var(--ac);color:#fff}
+@media(max-width:420px){.sw button{padding:0 8px;font-size:12px}.logo{display:none}}
+footer{border-top:1px solid var(--border);padding:32px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+#note{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);opacity:0;background:var(--text);color:var(--bg);padding:10px 18px;border-radius:12px;transition:.3s;z-index:40;font-size:14px;pointer-events:none}#note.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:640px){.links{display:none}}
+</style></head><body>
+<nav><div class="wrap"><a class="logo" id="logo" href="#top"></a><div class="links" id="links"></div>
+<div class="sw" id="sw" role="group" aria-label="Choose portfolio"></div><button class="btn ic" id="theme" aria-label="Toggle light or dark theme">◐</button></div><div id="bar"></div></nav>
+<main id="top">
+<header class="hero" id="home"><div class="wrap">
+<div class="avail"><i></i><span id="avail"></span></div>
+<h1 id="h1"></h1>
+<div class="role"><span id="role"></span><b>|</b></div>
+<p class="bio" id="bio"></p>
+<div class="row"><a class="btn p" href="#projects">View projects</a><a class="btn" href="#contact">Contact me</a><a class="btn" id="resume" aria-disabled="true" href="#">Download resume</a></div>
+<div class="stats" id="stats"></div></div></header>
+
+<section id="about"><div class="wrap"><h2>About</h2>
+<p class="sub" id="about-t"></p>
+<div class="grid" id="spec"></div></div></section>
+
+<section id="projects"><div class="wrap"><h2>Projects</h2><p class="sub">Select a project for the problem, solution and stack.</p>
+<div class="filters" id="filters"></div><div class="grid" id="plist"></div></div></section>
+
+<section id="skills"><div class="wrap"><h2>Skills</h2><p class="sub" id="sk-t"></p>
+<div class="sk" id="sk"></div><div class="wall" id="wall"></div>
+<p class="sub" id="learn" style="margin-top:24px"></p></div></section>
+
+<section id="experience"><div class="wrap"><h2>Experience &amp; education</h2><p class="sub"></p>
+<div class="tl" id="tl"></div>
+<div class="card" id="edu"></div></div></section>
+
+<section id="achievements"><div class="wrap"><h2>Achievements</h2><p class="sub"></p><div class="grid" id="ach"></div></div></section>
+
+<section id="story"><div class="wrap"><h2>My story</h2><p class="sub">Placeholders stay marked until you write the real answers.</p><div class="grid" id="story-list"></div></div></section>
+
+<section id="contact"><div class="wrap"><h2>Contact</h2><p class="sub">This sends a prefilled email to <span id="mail"></span>. Connect the contact API to store messages instead.</p>
+<form id="form" novalidate>
+<label>Name<input class="f" name="name" autocomplete="name"><span class="err"></span></label>
+<label>Email<input class="f" name="email" type="email" autocomplete="email"><span class="err"></span></label>
+<label>Subject<input class="f" name="subject"><span class="err"></span></label>
+<label>Message<textarea class="f" name="message" rows="5"></textarea><span class="err"></span></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn p" type="submit">Send message</button></form></div></section>
+</main>
+<footer><div class="wrap"><span id="foot"></span><span id="soc"></span></div></footer>
+<dialog id="dlg"></dialog><div id="note" role="status"></div>
+<script>
+const $=s=>document.querySelector(s),E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const note=m=>{const n=$('#note');n.textContent=m;n.classList.add('on');setTimeout(()=>n.classList.remove('on'),2800)};
+const ids=['home','about','projects','skills','experience','achievements','story','contact'];
+$('#links').innerHTML=ids.slice(1).map(i=>`<a href="#${i}" data-id="${i}">${i[0].toUpperCase()+i.slice(1)}</a>`).join('');
+// theme
+const root=document.documentElement;
+$('#theme').onclick=()=>{const dark=getComputedStyle(root).getPropertyValue('--bg').trim()==='#050505';root.dataset.theme=dark?'light':'dark'};
+// scroll progress + active link
+addEventListener('scroll',()=>{const h=root.scrollHeight-innerHeight;$('#bar').style.width=(h>0?scrollY/h*100:0)+'%';let a='home';ids.forEach(i=>{const e=document.getElementById(i);if(e&&e.getBoundingClientRect().top<innerHeight*.4)a=i});document.querySelectorAll('.links a').forEach(l=>l.classList.toggle('on',l.dataset.id===a))},{passive:true});
+
+const PH='Add your story here.';
+const simon={key:'simon',label:'P. Simon',title:'P. Simon',logo:'PS',h1:'P.<br><span class="grad">Simon</span>',avail:'Available for work · India',email:'you@example.com',resume:'/resume/P-Simon-Resume.pdf',
+roles:['Full-Stack Developer','Python Developer','Web Developer','Software Developer'],
+bio:'I build modern web applications, backend systems and software solutions with a focus on performance, usability and scalable architecture.',
+about:"I'm a Diploma in Computer Engineering student who builds complete products: interfaces people enjoy using, APIs that stay predictable, and databases that hold up. I move between PHP/Laravel, Python and JavaScript depending on what the problem needs, and I care about shipping things that are deployed and usable.",
+stats:[[6,'+','Featured projects'],[20,'+','Technologies'],[3,'+','Backend stacks'],[100,'%','Passion for development']],
+spec:[['Frontend Development','Responsive interfaces that feel fast and look intentional.','HTML,CSS,JavaScript,React,Responsive Design,Animations'],['Backend Development','APIs and services, from monoliths to realtime systems.','Python,PHP,Laravel,Node.js,Flask,FastAPI,REST APIs'],['Database & Cloud','Relational, document and hosted data.','MySQL,PostgreSQL,MongoDB,Firebase,Supabase,Cloudflare'],['Tools & DevOps','Version control, containers and deployment.','Git,GitHub,Docker,Vercel,Netlify,Linux,VS Code']],
+projects:[
+['PrivateChat Pro','web,backend,python','Built',2025,'A real-time private messaging platform with authentication, friend management, realtime communication and moderation.','Small groups need a private place to talk without ads or public exposure.','Flask handles auth and APIs, Socket.IO delivers messages live, and PostgreSQL via Supabase stores users and conversations.','User authentication,Friend management,Realtime messaging via Socket.IO,Moderation tools','HTML,CSS,JavaScript,Flask,Socket.IO,PostgreSQL,Supabase'],
+['Explore Andaman & Nicobar','web,react','Built',2025,'A travel discovery platform for destinations, attractions, packages and experiences across the islands.','Travel information for the islands is scattered across many sources.','A React front end backed by Node.js services with Firebase and Supabase for data.','Destination browsing,Packages and experiences,Responsive layout','React,Node.js,Firebase,Supabase'],
+['Darshan Home Tiffin','web,react,backend','Built',2025,'A food ordering and home-tiffin management platform for local customers and service providers.','Local tiffin providers manage orders manually.','React client talking to a Node.js REST API with a persistent database.','Menu and ordering,Provider management,REST API','React,Node.js,Database,REST API'],
+['Bike Service Job Card System','web,backend,laravel','Built',2025,'A service-management system tracking customers, vehicles, jobs, parts, billing and service history.','Paper job cards make history and billing hard to track.','Laravel MVC with MySQL and workflows for each job card.','Customer and vehicle records,Job cards,Parts and billing,Service history','Laravel,PHP,MySQL,Bootstrap/Tailwind'],
+['HopeConnect','mobile,backend,laravel','In progress',2026,'A charity, donation and job portal connecting people, organizations and opportunities.','Charities and job seekers lack one place to connect.','Flutter mobile app consuming a Laravel REST API on MySQL.','Donation flows,Job listings,Organization profiles','Flutter,Laravel REST API,MySQL'],
+['Flight Price Prediction System','python,ml','Built',2025,'A machine-learning application predicting flight prices from historical data and data processing.','Flight prices fluctuate and are hard to anticipate.','A Python pipeline cleans data and trains a regression model, exposed through a simple web form.','Data cleaning,Model training,Price prediction UI','Python,Machine Learning,Data Processing,Web Interface']],
+skills:{Languages:[['Python',85],['JavaScript',80],['PHP',80],['HTML/CSS',90]],Frontend:[['React',75],['Responsive design',85]],Backend:[['Laravel',75],['Flask',70],['Node.js',70],['REST APIs',80]],Databases:[['MySQL',80],['PostgreSQL',65],['MongoDB',65]],Frameworks:[['Flutter',55],['FastAPI',55]],Tools:[['Git/GitHub',85],['Docker',55],['VS Code',90]],Cloud:[['Vercel/Netlify',75],['Firebase',65],['Supabase',65],['Cloudflare',55]],Other:[['Problem solving',80],['UI/UX awareness',70]]},
+wall:'Python PHP Laravel JavaScript React Node.js HTML CSS Flutter Firebase Supabase MySQL PostgreSQL MongoDB Git GitHub Docker Linux Vercel Cloudflare'.split(' '),
+skillsub:'Self-assessed levels out of 100.',
+learn:'Currently learning: Laravel, React, Flutter, cloud deployment, system design and AI integration.',
+exp:[['2026 – Present','Full-Stack / Software Development','Personal & freelance projects','Building web applications, backend systems and software projects.','Laravel,React,Python'],['2025 – Present','Academic Development','Diploma in Computer Engineering','Core computing foundation with hands-on project work alongside.','Programming,Databases,Networks'],['Ongoing','Personal Projects','Self-directed','Multiple web, backend and application projects shipped end to end.','Flask,Node.js,Flutter']],
+edu:['Diploma in Computer Engineering (DCE)','Debarit · Computer Engineering','Add your year here','Programming,Databases,Web development,Networking'],
+ach:[['Projects Built','6 featured projects, with more in the works.'],['Technical Skills','20 technologies across the full stack.'],['Academic Milestones','Diploma in Computer Engineering, in progress.'],['Certifications','Add your certification here',1],['Hackathons','Add your hackathon here',1],['Open Source','Add your contribution here',1]],
+story:['How I Started Coding','My First Project','Why I Chose Computer Engineering','My Favorite Technology','A Project That Challenged Me',"What I'm Learning Now",'Where I Want to Go','What I Want to Build'].map(t=>[t,t.startsWith("What I'm")?'Laravel, React, Flutter, cloud deployment, system design and AI integration.':PH,!t.startsWith("What I'm")]),
+soc:[['GitHub','https://github.com/'],['LinkedIn','https://linkedin.com/'],['Instagram','https://instagram.com/'],['Email','mailto:you@example.com']]};
+// Placeholder profile: nothing here is a claimed fact. Replace each "Add your..." with real content.
+const omisha={key:'omisha',label:'K.K. Omisha',title:'K.K. Omisha',logo:'KO',h1:'K.K.<br><span class="grad">Omisha</span>',avail:'Based in India',email:'omisha@example.com',resume:'/resume/KK-Omisha-Resume.pdf',
+roles:['Computer Engineering Student','Aspiring Software Developer'],
+bio:'Computer Engineering student interested in web development, software development and modern technology.',
+about:'I am a Computer Engineering student passionate about learning new technologies and developing useful software applications. I am interested in creating responsive websites, designing user-friendly interfaces, and understanding backend development and database management. My goal is to improve my programming knowledge, gain practical experience, and build innovative solutions to real-world problems.',
+skillsub:'Technologies I have learned or used.',
+stats:[[4,'','Projects'],[18,'','Technologies'],[4,'','Programming languages']],
+spec:[['Frontend Development','Responsive websites and user-friendly interfaces.','HTML,CSS,JavaScript,Responsive Web Design'],['Backend Development','Server-side logic and application back ends.','PHP,Laravel,Node.js,Python Flask'],['Databases','Storing and managing application data.','MySQL,MongoDB,PostgreSQL,Firebase'],['Tools & Platforms','Everyday development workflow and hosting.','Visual Studio Code,Git,GitHub,Linux,Vercel']],
+projects:[
+['Personal Portfolio Website','web','Project','','A responsive personal website that introduces the developer, displays technical skills, highlights projects, and provides contact information.','','','','HTML,CSS,JavaScript'],
+['Online Food Delivery System','web,backend','Project','','A web-based application designed to help customers browse food items, place orders, and manage their food delivery activities.','','','','HTML,CSS,JavaScript,PHP,MySQL'],
+['Student Management System','web,backend','Project','','An application designed to manage student information, academic records, and other essential student details.','','','','HTML,CSS,PHP,MySQL'],
+['Library Management System','backend','Project','','A software application designed to organize book records, manage library users, and track book borrowing and returns.','','','','Java or PHP,MySQL']],
+skills:{'Programming languages':[['Python'],['Java'],['JavaScript'],['PHP']],'Frontend':[['HTML'],['CSS'],['JavaScript'],['Responsive Web Design']],'Backend':[['PHP'],['Laravel'],['Node.js'],['Python Flask']],'Databases':[['MySQL'],['MongoDB'],['PostgreSQL'],['Firebase']],'Tools & platforms':[['Visual Studio Code'],['Git and GitHub'],['Linux'],['Vercel']]},
+wall:['Python','Java','JavaScript','PHP','HTML','CSS','Laravel','Node.js','Flask','MySQL','MongoDB','PostgreSQL','Firebase','VS Code','Git','GitHub','Linux','Vercel'],
+learn:'',
+exp:[['Ongoing','Academic and Personal Projects','Computer Engineering student','Developing practical programming skills through academic assignments, personal projects and hands-on learning. Exploring different programming languages and frameworks to understand application development.','Programming,Web development']],
+edu:['Diploma in Computer Engineering','Add your college name here','Add your academic year here','Programming Fundamentals,Database Management Systems,Computer Networks,Web Development,Software Engineering'],
+ach:[['Programming & web','Developed practical knowledge of programming and web technologies.'],['Academic projects','Worked on academic software development projects.'],['Problem solving','Improved problem-solving and logical thinking skills.'],['Continuous learning','Continued learning modern development tools and technologies.'],['Certifications & awards','Add verified achievements, certifications and awards here',1]],
+story:[['Career Objective','My career objective is to become a skilled software developer who can design, develop, and maintain reliable applications. I aim to strengthen my technical knowledge, work on challenging projects, collaborate with other developers, and contribute to innovative software solutions.',0],['My Goal','To improve my programming knowledge, gain practical experience, and build innovative solutions to real-world problems.',0]],
+soc:[['GitHub','https://github.com/'],['LinkedIn','https://linkedin.com/'],['Email','mailto:omisha@example.com']]};
+const PR=[simon,omisha];let D=simon,cur='all',typer=0,R=0,CI=0,DEL=false;
+const ph=(t,p)=>`<p class="${p?'ph':''}">${E(t)}</p>`;
+const badges=a=>a.map(x=>`<span class="badge">${E(x)}</span>`).join('');
+function typeLoop(id){if(id!==typer)return;const w=D.roles[R%D.roles.length];CI+=DEL?-1:1;$('#role').textContent=w.slice(0,CI);let d=DEL?35:70;if(!DEL&&CI>=w.length){if(D.roles.length<2)return;DEL=true;d=1400}else if(DEL&&CI<=0){DEL=false;R++;d=300}setTimeout(()=>typeLoop(id),d)}
+function draw(){const fl=[['all','All'],['web','Web'],['mobile','Mobile'],['backend','Backend'],['python','Python'],['laravel','Laravel'],['react','React'],['ml','AI/ML']];
+const P=D.projects.map(a=>({title:a[0],cat:a[1].split(','),status:a[2],year:a[3],desc:a[4],problem:a[5],sol:a[6],feat:a[7].split(','),tech:a[8].split(',')}));window.P=P;
+$('#filters').style.display=P.length>1?'flex':'none';
+$('#filters').innerHTML=fl.map(([k,l])=>`<button data-k="${k}" aria-pressed="${k===cur}">${l}</button>`).join('');
+$('#plist').innerHTML=P.map((p,i)=>({p,i})).filter(({p})=>cur==='all'||p.cat.includes(cur)).map(({p,i})=>`<button class="card pc" data-i="${i}"><div class="thumb">${p.title.split(' ').slice(0,2).map(w=>w[0]).join('')}</div><div class="meta"><span>${p.status}</span><span>${p.year}</span></div><h3>${E(p.title)}</h3><p>${E(p.desc)}</p><div>${badges(p.tech.slice(0,4))}</div></button>`).join('')}
+function render(){document.title=D.title+' | Portfolio';$('#logo').textContent=D.logo;$('#h1').innerHTML=D.h1;$('#avail').textContent=D.avail;$('#bio').textContent=D.bio;$('#about-t').textContent=D.about;$('#mail').textContent=D.email;
+$('#sw').innerHTML=PR.map(p=>`<button data-k="${p.key}" aria-pressed="${p.key===D.key}">${p.label}</button>`).join('');
+const rs=$('#resume');rs.href=D.resume;
+$('#foot').textContent='© 2026 '+D.title;$('#soc').innerHTML=D.soc.map(([l,u])=>`<a href="${u}">${l}</a>`).join(' · ');
+$('#stats').innerHTML=D.stats.map(([v,s,l])=>`<div><strong data-v="${v}" data-s="${s}">0${s}</strong><span>${l}</span></div>`).join('');
+document.querySelectorAll('[data-v]').forEach(e=>{const v=+e.dataset.v;let n=0;const st=setInterval(()=>{n=Math.min(v,n+Math.ceil(v/30));e.textContent=n+e.dataset.s;if(n>=v)clearInterval(st)},30)});
+$('#spec').innerHTML=D.spec.map(([t,d,g])=>`<div class="card"><h3>${t}</h3><p>${d}</p>${badges(g.split(','))}</div>`).join('');
+cur='all';draw();
+const ents=Object.entries(D.skills);
+$('#sk').innerHTML=ents.length?ents.map(([g,s])=>`<div class="card"><h3>${g}</h3>${s[0][1]==null?badges(s.map(x=>x[0])):s.map(([n,v])=>`<div class="bar"><div><b style="font-weight:500">${n}</b><span>${v}</span></div><div class="track"><i data-w="${v}"></i></div></div>`).join('')}</div>`).join(''):'<div class="card"><h3>Skills</h3><p class="ph">Add your skills and levels here.</p></div>';
+$('#wall').innerHTML=D.wall.map(t=>`<span>${t}</span>`).join('');$('#learn').textContent=D.learn;$('#sk-t').textContent=D.skillsub;
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('i[data-w]').forEach(i=>i.style.width=i.dataset.w+'%');o.unobserve(e.target)}})).observe($('#sk'));
+$('#tl').innerHTML=D.exp.map(([d,r,o,t,g])=>`<div class="card"><div class="date">${E(d)}</div><h3>${E(r)}</h3><p style="margin-bottom:6px">${E(o)}</p><p>${E(t)}</p>${badges(g.split(','))}</div>`).join('');
+const[c,col,y,g]=D.edu;$('#edu').innerHTML=`<h3>${E(c)}</h3><p>${E(col)}</p>${ph(y,y.startsWith('Add'))}${badges(g.split(','))}`;
+$('#ach').innerHTML=D.ach.map(([t,x,p])=>`<div class="card"><h3>${t}</h3>${ph(x,p).replace('<p','<p style="margin:0"')}</div>`).join('');
+$('#story-list').innerHTML=D.story.map(([t,x,p])=>`<div class="card"><h3>${t}</h3>${ph(x,p).replace('<p','<p style="margin:8px 0 0"')}</div>`).join('');
+$('#form').reset();$('#form').querySelectorAll('.err').forEach(e=>e.textContent='');
+R=0;CI=0;DEL=false;typer++;typeLoop(typer)}
+$('#sw').onclick=e=>{const k=e.target.dataset.k;if(!k||k===D.key)return;D=PR.find(p=>p.key===k);try{localStorage.setItem('profile',k)}catch(_){}render();scrollTo({top:0,behavior:'smooth'});note('Showing '+D.title)};
+$('#filters').onclick=e=>{const k=e.target.dataset.k;if(k){cur=k;draw()}};
+$('#plist').onclick=e=>{const c=e.target.closest('[data-i]');if(!c)return;const p=P[c.dataset.i];
+$('#dlg').innerHTML=`<div class="meta"><span>${E(p.status)}</span><span>${p.year||''}</span></div><h3 style="font-size:26px">${E(p.title)}</h3><p style="margin-top:8px">${E(p.desc)}</p>${p.problem?`<h4>Problem</h4><p>${E(p.problem)}</p>`:''}${p.sol?`<h4>Solution</h4><p>${E(p.sol)}</p>`:''}${p.feat.filter(Boolean).length?`<h4>Features</h4><ul>${p.feat.filter(Boolean).map(f=>`<li>${E(f)}</li>`).join('')}</ul>`:''}<h4>Stack</h4><div>${badges(p.tech)}</div><p class="ph" style="margin-top:14px">Add GitHub and live demo links in projects.js.</p><div class="row"><button class="btn" id="x">Close</button></div>`;
+$('#dlg').showModal();$('#x').onclick=()=>$('#dlg').close()};
+$('#dlg').onclick=e=>{if(e.target===$('#dlg'))$('#dlg').close()};
+$('#resume').addEventListener('click',e=>e.preventDefault());
+$('#form').onsubmit=e=>{e.preventDefault();const f=e.target,v=n=>f[n].value.trim(),er={};
+if(f.website.value)return note('Message sent');
+if(!v('name')||v('name').length>100)er.name='Enter your name (max 100 characters).';
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email')))er.email='Enter a valid email address.';
+if(!v('subject')||v('subject').length>150)er.subject='Enter a subject (max 150 characters).';
+if(v('message').length<10||v('message').length>5000)er.message='Message must be 10 to 5000 characters.';
+f.querySelectorAll('.err').forEach((s,i)=>s.textContent=er[['name','email','subject','message'][i]]||'');
+if(Object.keys(er).length)return;
+location.href=`mailto:${D.email}?subject=${encodeURIComponent(v('subject'))}&body=${encodeURIComponent(v('message')+'\n\n'+v('name')+' ('+v('email')+')')}`;note('Opening your email app')};
+try{const k=localStorage.getItem('profile');D=PR.find(p=>p.key===k)||simon}catch(_){}
+render();
+</script></body></html>
